@@ -1,6 +1,6 @@
 # sox_mqttjs
-- sox-mqtt をpythonで実装したのをベースにnode.jsでも同様の動きをさせられるようにしました。
-- mqtt-brokerの設定や各種基本については、[sox-mqtt](https://github.com/nkzwlab/sox_mqtt)をご確認ください。
+- sox_mqtt をpythonで実装したのをベースにnode.jsでも同様の動きをさせられるようにしました。
+- mqtt-brokerの設定や各種基本については、[sox_mqtt](https://github.com/nkzwlab/sox_mqtt)をご確認ください。
 - ここでは、sox-mqttjsの使い方だけまとめておきます。
 
 ## sox_mqttモジュール
