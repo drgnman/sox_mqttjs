@@ -12,14 +12,15 @@ npm install mqtt
 - sox_mqttフォルダ配下に各種モジュールを配置しているので、必要に応じてimportしてください。
 - 基本的には以下で全部importしてしまうのがいいと思います。
 
-```
+```javascript
 let sox_mqtt = require("./sox_mqtt")
 ```
 
 ## Connection
 - sox_mqtt(python)との違いはmqtt.jsがclient_idを自動でランダム生成してくれるので引数から除外しています。
 - pythonと違い、関数呼び出し時に変数名指定ができない(記載順)になるため、ご注意
-```
+
+```javascript
 connection = new sox_mqtt.Connection("localhost", 1883, keepalive=60 ,username=null, password=null);
 client = connection.connect();
 ```
@@ -35,7 +36,7 @@ client = connection.connect();
 - sox_mqttとの違いは、mqtt.jsのsubscribeメソッドがどうやら、複数のトピックの同時サブスクライブに対応していない(後に書いたsubscribeで上書きされる)ため、subscribe単位でclientを生成する必要がありそうです。
 - clientオブジェクトごとに、下記通り、受信時の処理の設定を書いてください。
 
-```
+```javascript
 client.on("message", function(topic, msg){
     console.log(msg.toString() + "from topic: " +topic.toString());
 })
