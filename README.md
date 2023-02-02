@@ -18,9 +18,9 @@ let sox_mqtt = require("./sox_mqtt")
 
 ## Connection
 - sox_mqtt(python)との違いはmqtt.jsがclient_idを自動でランダム生成してくれるので引数から除外しています。
-
+- pythonと違い、関数呼び出し時に変数名指定ができない(記載順)になるため、ご注意
 ```
-connection = new sox_mqtt.Connection("localhost", 1883, username=null, password=null);
+connection = new sox_mqtt.Connection("localhost", 1883, keepalive=60 ,username=null, password=null);
 client = connection.connect();
 ```
 
