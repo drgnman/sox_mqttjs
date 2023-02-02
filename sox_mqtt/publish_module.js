@@ -14,7 +14,7 @@ PublishModule.prototype.create = function(node){
         "description": node.getDescription(),
         "create_timestamp": now.getFullYear() + "-" 
             + (now.getMonth()+1).toString().padStart(2, "0") + "-"
-            + now.getDay().toString().padStart(2, "0") + " "
+            + now.getDate().toString().padStart(2, "0") + " "
             + now.getHours().toString().padStart(2, "0") + ":"
             + now.getMinutes().toString().padStart(2, "0") + ":"
             + now.getSeconds().toString().padStart(2, "0") + "."
